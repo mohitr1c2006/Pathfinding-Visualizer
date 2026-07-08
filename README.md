@@ -78,6 +78,7 @@ Watch BFS, DFS, Dijkstra, and A* algorithms come to life on a 20×20 grid in rea
 ---
 
 ## 📁 Project Structure
+```text
 src/
 ├── algorithms/
 │   ├── bfs.js
