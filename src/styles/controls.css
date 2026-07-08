@@ -1,0 +1,165 @@
+/* ============================================
+   CONTROLS CONTAINER
+   ============================================ */
+
+.controls-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 24px;
+  background-color: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ============================================
+   CONTROLS GROUP
+   ============================================ */
+
+/* Groups label+dropdown and buttons together */
+.controls-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ============================================
+   LABEL
+   ============================================ */
+
+.controls-label {
+  font-size: 0.85rem;
+  color: #a0a0b0;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ============================================
+   DROPDOWN SELECT
+   ============================================ */
+
+.controls-select {
+  background-color: #0f3460;
+  color: #ffffff;
+  border: 1px solid #00d4ff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+  min-width: 200px;
+}
+
+.controls-select:hover {
+  border-color: #ffffff;
+}
+
+.controls-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   BASE BUTTON STYLES
+   ============================================ */
+
+.btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0px);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ============================================
+   BUTTON TYPES
+   ============================================ */
+
+/* Run button — green */
+.btn-run {
+  background-color: #00b300;
+  color: #ffffff;
+}
+
+.btn-run:hover:not(:disabled) {
+  background-color: #00cc00;
+}
+
+/* Pause button — amber */
+.btn-pause {
+  background-color: #e6a817;
+  color: #ffffff;
+}
+
+.btn-pause:hover {
+  background-color: #f0b429;
+}
+
+/* Resume button — blue */
+.btn-resume {
+  background-color: #378ADD;
+  color: #ffffff;
+}
+
+.btn-resume:hover {
+  background-color: #4a9ae8;
+}
+
+/* Reset button — red */
+.btn-reset {
+  background-color: #cc3333;
+  color: #ffffff;
+}
+
+.btn-reset:hover:not(:disabled) {
+  background-color: #dd4444;
+}
+
+/* ============================================
+   SPEED CONTROL (BONUS)
+   ============================================ */
+
+.controls-speed {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.controls-speed input[type='range'] {
+  width: 80px;
+  accent-color: #00d4ff;
+  cursor: pointer;
+}
+
+.controls-speed-label {
+  font-size: 0.78rem;
+  color: #a0a0b0;
+  white-space: nowrap;
+}

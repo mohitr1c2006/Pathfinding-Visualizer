@@ -1,0 +1,180 @@
+/* ============================================
+   GLOBAL RESET
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* ============================================
+   APP CONTAINER
+   ============================================ */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ============================================
+   APP TITLE
+   ============================================ */
+
+.app-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   APP BODY
+   ============================================ */
+
+/* Grid and sidebar sit side by side */
+.app-body {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ============================================
+   SIDEBAR
+   ============================================ */
+
+.app-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 240px;
+  max-width: 260px;
+}
+
+/* ============================================
+   STATS PANEL
+   ============================================ */
+
+.stats-panel {
+  background-color: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.stats-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stats-subtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00d4ff;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #0f3460;
+}
+
+.stats-row:last-child {
+  border-bottom: none;
+}
+
+.stats-label {
+  font-size: 0.8rem;
+  color: #a0a0b0;
+}
+
+.stats-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.stats-complexity {
+  color: #00d4ff;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.stats-divider {
+  border: none;
+  border-top: 1px solid #0f3460;
+  margin: 10px 0;
+}
+
+.stats-description {
+  font-size: 0.78rem;
+  color: #a0a0b0;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+/* ============================================
+   LEGEND
+   ============================================ */
+
+.legend-container {
+  background-color: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.legend-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.legend-color-box {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.legend-label {
+  font-size: 0.82rem;
+  color: #a0a0b0;
+}

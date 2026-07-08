@@ -1,0 +1,140 @@
+/* ============================================
+   GRID CONTAINER
+   ============================================ */
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #0f3460;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #0f3460;
+  gap: 1px;
+  cursor: crosshair;
+  user-select: none;
+}
+
+/* ============================================
+   GRID ROW
+   ============================================ */
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+}
+
+/* ============================================
+   BASE CELL
+   ============================================ */
+
+.cell {
+  width: 28px;
+  height: 28px;
+  border-radius: 2px;
+  transition: background-color 0.1s ease;
+}
+
+/* ============================================
+   CELL TYPES
+   ============================================ */
+
+/* Empty cell — white */
+.cell-empty {
+  background-color: #ffffff;
+}
+
+/* Wall cell — dark */
+.cell-wall {
+  background-color: #2c2c2a;
+  transform: scale(1.0);
+  animation: wallAppear 0.15s ease forwards;
+}
+
+/* Start node — green */
+.cell-start {
+  background-color: #00b300;
+}
+
+/* End node — red */
+.cell-end {
+  background-color: #ff0000;
+}
+
+/* Visited node — blue */
+.cell-visited {
+  background-color: #378ADD;
+  animation: visitedAnimation 0.4s ease forwards;
+}
+
+/* Path node — purple */
+.cell-path {
+  background-color: #7F77DD;
+  animation: pathAnimation 0.4s ease forwards;
+}
+
+/* ============================================
+   CELL HOVER
+   ============================================ */
+
+/* Highlight empty cells on hover */
+.cell-empty:hover {
+  background-color: #e0e0e0;
+  cursor: crosshair;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+/* Wall appearing animation */
+@keyframes wallAppear {
+  0% {
+    transform: scale(0.6);
+    background-color: #555555;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #444444;
+  }
+  100% {
+    transform: scale(1.0);
+    background-color: #2c2c2a;
+  }
+}
+
+/* Visited node animation — ripple effect */
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.4);
+    background-color: #00d4ff;
+    border-radius: 50%;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #4a90d9;
+  }
+  100% {
+    transform: scale(1.0);
+    background-color: #378ADD;
+    border-radius: 2px;
+  }
+}
+
+/* Path node animation — pop effect */
+@keyframes pathAnimation {
+  0% {
+    transform: scale(0.4);
+    background-color: #ffff00;
+    border-radius: 50%;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: #9b8fe0;
+  }
+  100% {
+    transform: scale(1.0);
+    background-color: #7F77DD;
+    border-radius: 2px;
+  }
+}
